@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+}
+
+header {
+    background-color: rgb(212, 162, 87);
+    color: white;
+    padding: 30px;
+    position: fixed;
+}
+
+h2{
+
+    margin: 35px;
+
+}
+li{
+    margin: 10px;
+}
+
+main{
+    
+    background-color: #f3f3d8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+li{
+    list-style: none;
+}
+
+.alinhador{
+    display: block;
+    width: 85%;
+    background-color: white;
+    padding: 11px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    font-size: 37px;
+    margin-left: 8%;
+}
+
+.menu-icon {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+}
+.int{
+    text-align: left;
+
+    
+}
+
+.int img {
+    display: block;
+    margin: 20px auto; 
+}
+
+
+nav.menu {
+    position: absolute;
+    top: 50px;
+    right: -100%;
+    width: 200px;
+    height: 100vh;
+    background-color:  rgb(187, 132, 48);
+    transition: right 0.3s;
+}
+
+nav.menu ul {
+    list-style: none;
+    padding: 10px;
+}
+
+nav.menu ul li {
+    margin: 10px 0;
+}
+
+nav.menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked ~ .menu-icon ~ nav.menu {
+    right: 0;
+}
+
+
+main h1 {
+    margin-bottom: 20px;
+}
+
+main section {
+    margin-bottom: 20px;
+}
+
+main ul.links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+main ul.links li {
+    list-style: none;
+}
+
+main ul.links li a {
+    display: block;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+main ul.links li a:hover {
+    background-color: #f0f0f0;
+    border-color: #ccc;
+}
+footer {
+    background-color: rgb(212, 162, 87);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+
+/* Estilo para dispositivos maiores */
+@media (min-width: 600px) {
+    .menu-icon {
+        display: none;
+    }
+
+    nav.menu {
+        position: static;
+        width: auto;
+        display: flex;
+        height: auto;
+    }
+
+    nav.menu ul {
+        display: flex;
+    }
+
+    nav.menu ul li {
+        margin: 0 10px;
+    }
+
+
+    header{
+        position: static;
+    }
+
+    main ul.links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    main ul.links li {
+        flex: 1 1 calc(33.333% - 20px);
+        max-width: 350px;
+    }
+}
+
+
